@@ -64,6 +64,25 @@ var singers = ["Taylor", "Adele", "Justin"]
 let age = 26
 ```
 
+### Set
+
+- 以下哪些行代码将创建一个包含 2 个元素的 set：
+
+```swift
+ 1: var readings = Set([true, false, true, true])
+ 2: var attendees = Set([100, 100, 101, 100])
+ 3: let users = ["Taylor", "Adele"]
+ 4: let earthquakeStrengths = Set(1, 1, 2, 2)
+ 5: let cats = ["Burmese", "Siamese", "Persian"]
+ 6: var names = Set(["Sean", "Paul"])
+ 7: var colors = Set(["Red", "Green", "Red"])
+ 8: let staffReviews = Set([1, 2, 1, 2, 3])
+ 9: var ratings = Set([1, 1, 1, 2, 2, 2])
+10: let playlistSizes = Set([1000])
+11: var scores = Set([9, 10])
+12: let averageHeights = Set([1.71, 1.72, 1.73])
+```
+
 
 
 ## 简单代码实现
