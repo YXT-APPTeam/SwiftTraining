@@ -149,6 +149,60 @@ B. 元组和数组是相同的
 2.一个人的姓名
 ```
 
+### Dictionary
+
+- 以下代码是否有效：
+
+```swift
+1.
+let ships = ["Star Trek", "Enterprise"]
+let enterprise = ships["Star Trek"]
+
+2.
+let planets = [1: "Mercury", 2: "Venus"]
+let venus = planets[2, default: "Planet X"]
+
+3.
+let ratings = [1: "Bad", 2: "OK", 3: "Good"]
+let rating = ratings["2"]
+
+4.
+let capitals = ["England": "London", "Wales": "Cardiff"]
+let scotlandCapital = capitals["Scotland"]
+
+5.
+let olympics = [2012: "London", 2016: "Rio", 2020: "Tokyo"]
+let london = olympics[2012]
+
+6.
+let users = ["Taylor", "Taylor Swift"]
+let taylor = users["Taylor", default: "Anonymous"]
+
+7.
+let books = ["Austen": "Pride and Prejudice"]
+let dickens = books["Dickens", default: "Unknown"]
+
+8.
+let prices = ["Milk": 1, "Pepsi": 2]
+let first = prices[0]
+
+9.
+let albums = ["Prince": "Purple Rain"]
+let beatles = albums["Beatles"]
+
+10.
+let abbreviations = ["m": "meters", "km": "kilometers"]
+let meters = abbreviations["m", default "m"]
+
+11.
+let characters = ["Captain": "Malcolm", "Engineer": "Kaylee"]
+let captain = characters["Captain"]
+
+12.
+let scores = ["Paul": 80, "Sophie": 100]
+let john = scores[john]
+```
+
 
 
 ## 简单代码实现
