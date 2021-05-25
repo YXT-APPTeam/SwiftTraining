@@ -17,50 +17,38 @@ var temperatures = [32.0]
 - 下面哪一行代码创建的是数组：
 
 ```swift
-// 1:
+1.
+A:
 var averages = [98.5, 97.1, 99.9]
-
-// 2:
+B:
 let status = false, true, true, true
-```
 
-- 下面哪一行代码创建的是数组：
-
-```swift
-// 1:
+2.
+A:
 var cities: [String] = ["London", "Paris", "New York"]
-
-// 2:
+B:
 let playlistSizes = (100, 200, 300)
 ```
 
 - 下面哪一行代码创建的是数组：
 
 ```swift
-// 1:
+1.
+A:
 let characters: [Int] = ["Doctor Who"]
-
-// 2:
+B:
 var readings: [Bool] = [false, false, true, false]
-```
 
-- 下面哪一行代码创建的是数组：
-
-```swift
-// 1:
+2.
+A:
 var scores: [Int] = [10, 12, 9]
-
-// 2:
+B:
 let breeds = {"Labrador", "Chihuahua"}
-```
 
-- 下面哪一行代码创建的是数组：
-
-```swift
-// 1:
+3.
+A:
 var singers = ["Taylor", "Adele", "Justin"]
-
-// 2:
+B:
 let age = 26
 ```
 
@@ -150,6 +138,46 @@ B. 元组和数组是相同的
 ```
 
 ### Dictionary
+
+- 以下哪一行代码创建了一个字典：
+
+```swift
+1.
+A:
+var roles = ["captain": "Mal", "engineer": "Kaylee"]
+B:
+var place = ["road", "Park Lane", "city", "Cardiff"]
+
+2.
+A:
+let location = ("road": "Park Lane", "city": "Cardiff")
+B:
+let heights = ["Taylor Swift": 1.78]
+
+3.
+A:
+var address = ["road": "Park Lane", "city": "Cardiff"]
+B:
+var books = ["The Jungle Book"]
+
+4.
+A:
+var speed = 60.75
+B:
+var capitals = ["England": "London", "Scotland": "Edinburgh"]
+
+5.
+A:
+let forecast = ["Monday": "sunny", "Tuesday": "cloudy"]
+B:
+let isVisible = true
+
+6.
+A:
+let scores = ["Sophie": 100]
+B:
+let password = "fr0sti3s"
+```
 
 - 以下代码是否有效：
 
