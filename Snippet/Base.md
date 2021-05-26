@@ -231,6 +231,90 @@ let scores = ["Paul": 80, "Sophie": 100]
 let john = scores[john]
 ```
 
+### 集合
+
+- 下面哪一行代码是有效的：
+
+```swift
+1.
+A:
+var favoriteColors = Dictionary<String, String>()
+B:
+var measurements = [Double]
+
+2.
+A:
+var states = Set<String>()
+B:
+var episodeNames = Array()
+
+3.
+A:
+var answers = [Bool]()
+B:
+var badges = Set<>()
+
+4.
+A:
+var scores = Array<Int>()
+B:
+var wines = Dictionary<String: String>()
+
+5.
+A:
+var temperatures = [Double]()
+B:
+var mountainHeights = [String, Int]()
+
+6.
+A:
+var friends = Set[String]()
+B:
+var authorAges = [String: Int]()
+```
+
+### 枚举
+
+- 下面哪一项最适合使用枚举：
+
+```swift
+1.
+A:
+方向（东西南北）
+B:
+一系列物体的高度
+
+2.
+A:
+旅游过的城市清单
+B:
+错误类型
+
+3.
+A:
+电影类型
+B:
+一个邮箱地址
+
+4.
+A:
+考试平均分
+B:
+一副纸牌中的花色
+
+5.
+A:
+一年中的月份
+B:
+密码
+
+6.
+A:
+星期
+B:
+用户名
+```
+
 
 
 ## 简单代码实现
