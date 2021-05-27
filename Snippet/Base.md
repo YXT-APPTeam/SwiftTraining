@@ -52,7 +52,7 @@ B:
 let age = 26
 ```
 
-- 使用 Swift 改写以下 Objective-c 代码：
+- 使用 Swift 的数组类型改写以下 Objective-C 代码：
 
 ```objective-c
 1.
@@ -64,6 +64,19 @@ NSArray *videoTracks = [asset tracksWithMediaType:AVMediaTypeVideo];
 
 3.
 NSMutableArray *compQuaArr = [NSMutableArray array];
+```
+
+- 生成以下数组符合条件的子集：
+
+```swift
+1. 所有值大于 30 的元素：
+let nums = [10,20,30,35,5,60]
+
+2. 所有长度大于 4 个字符的名字，并且按字母表顺序排序首字母：
+let names = ["Jobs", "Mikes", "Bob", "Abrahams", "Bruce", "Jeannette"]
+
+3. 所有无法被 2 整除的元素，获取这些元素被 2 除的余数集合：
+let nums = [2,4,7,9,3,13,18,22]
 ```
 
 ### Set
