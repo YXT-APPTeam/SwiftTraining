@@ -52,6 +52,20 @@ B:
 let age = 26
 ```
 
+- 使用 Swift 改写以下 Objective-c 代码：
+
+```objective-c
+1.
+NSArray *windows = [[UIApplication sharedApplication] windows];
+
+2.
+// AVAsset *asset = ... // 此句不用改写
+NSArray *videoTracks = [asset tracksWithMediaType:AVMediaTypeVideo];
+
+3.
+NSMutableArray *compQuaArr = [NSMutableArray array];
+```
+
 ### Set
 
 - 以下哪些行代码将创建一个包含 2 个元素的 set：
