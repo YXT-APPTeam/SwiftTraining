@@ -342,6 +342,48 @@ B:
 
 ```
 
+- 以下哪一项创建的是带关联值的枚举：
+
+```swift
+1.
+A:
+enum Building { case skyscraper(floors: Int) }
+B:
+enum role { case administrator }
+
+2.
+A:
+enum Sport { case running(distance: Int) }
+B:
+enum Status { case read }
+
+3.
+A:
+let furniture = [chair, table, couch]
+B:
+enum CharacterClass { case paladin(level: Int) }
+
+4.
+A:
+let chosenHobby = case hobby(name: String) }
+B:
+enum Instruments { case piano(isElectric: Bool) }
+
+5.
+A:
+enum Forecast { case cloudy(coverage: Int) }
+B:
+enum SocialMedia case twitter(username: Int)
+
+6.
+A:
+enum Activity { case reading(bookTitle: String) }
+B:
+case BandMember(role: String)
+```
+
+
+
 
 
 ## 简单代码实现
