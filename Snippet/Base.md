@@ -66,7 +66,7 @@ NSArray *videoTracks = [asset tracksWithMediaType:AVMediaTypeVideo];
 NSMutableArray *compQuaArr = [NSMutableArray array];
 ```
 
-- 生成以下数组符合条件的子集：
+- 编写代码生成符合以下条件的数组子集：
 
 ```swift
 1. 所有值大于 30 的元素：
@@ -380,6 +380,53 @@ A:
 enum Activity { case reading(bookTitle: String) }
 B:
 case BandMember(role: String)
+```
+
+- 以下哪一项关于枚举的 raw value 描述是正确的：
+
+```swift
+1.
+A: raw value 让枚举转变成了字典
+B: 每个 case 都可以指定 raw value
+
+2.
+A: Int 类型的 raw value 默认从 0 开始
+B: 如果给一个 case 设置了 raw value 那么必须给所有 case 都设置
+
+3.
+A: 可以不使用 raw value
+B: raw value 与关联值是一回事
+
+4.
+A: raw value 必须是字符串
+B: raw value 可以使用 Int 类型值
+
+5.
+A: raw value 可以让我们动态创建枚举
+B: raw value 不能直接使用
+
+6.
+A: raw value 可以让 case 具体一定含义
+B: 枚举必须包含 raw value
+```
+
+### 混合题
+
+- 以下代码创建的是否为数组、字典、set、元组中的一种类型：
+
+```swift
+1. var fibonacci = (1, 1, 2, 3, 5, 8)
+2. var repeatCount = [String: Int]
+3. let usedWords = Set(["hello", "world"])
+4. let winners: [String] = ("David", "Jason", "Raquel")
+5. var lotteryNumbers = Set(11, 23, 44)
+6. var names = ["Beyoncé", "Jay-Z"]
+7. var unreadMessages: Int = "12"
+8. let episodes = [String]()
+9. var scores = [100, 90, 85]
+10. let ages: Int = [26, 28, 39]
+11. let credentials = ["username": "twostraws"]
+12. let isConfigured = false
 ```
 
 
