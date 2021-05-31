@@ -77,7 +77,14 @@ let names = ["Jobs", "Mikes", "Bob", "Abrahams", "Bruce", "Jeannette"]
 
 3. 所有无法被 2 整除的元素，获取这些元素被 2 除的余数集合：
 let nums = [2,4,7,9,3,13,18,22]
+
+// 参考答案：
+1. nums.filter { $0 > 30 }
+2. names.filter { $0.count > 4 }.sorted(by: <)
+3. nums.filter { $0 % 2 != 0 }.map { $0 % 2 }
 ```
+
+- 给 Array 类型添加扩展方法，用于给数组扩容，执行条件：当数组中现有元素数量超过当前容量一半时扩容（容量翻倍）；另外，如果数组元素是 String 类型时，扩容时容量变为原来 3 倍。
 
 ### Set
 
