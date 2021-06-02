@@ -85,9 +85,196 @@ let nums = [2,4,7,9,3,13,18,22]
 2. names.filter { $0.count > 4 }.sorted(by: <)
 3. nums.filter { $0 % 2 != 0 }.map { $0 % 2 }
 4. 
+let numsLargerThan30 = nums.reduce([Int]()) { $1 > 30 ? $0 + [$1] : $0 }
+let numsCannotDivideBy2 = nums2.reduce([Int]()) { $1 % 2 > 0 ? $0 + [$1 % 2] : $0 }
 ```
 
 - 给 Array 类型添加扩展方法，用于给数组扩容，执行条件：当数组中现有元素数量超过当前容量一半时扩容（容量翻倍）；另外，如果数组元素是 String 类型时，扩容时容量变为原来 3 倍。
+
+### 字符串
+
+- 哪一行代码创建的是字符串：
+
+```swift
+1.
+A:
+var mortgageRemaining = 100_000
+B:
+var dogBreed = "samoyed"
+
+2.
+A:
+var speed = 88
+B:
+var age = "23"
+
+3.
+A:
+var repeatCount = 82
+B:
+var selectedWood = "mahogany"
+
+4.
+A:
+var highScore = 328_556
+B:
+var sizeInInches = "27"
+
+5.
+A:
+var currentSong = "Rainbow to the Stars"
+B:
+var power = 9001
+
+6.
+A:
+var winner = "Miguel"
+B:
+var rating = 5
+```
+
+- 以下代码创建的多行字符串是否正确：
+
+```swift
+1.
+var burns = """
+The best laid schemes
+o' mice an' men
+gang aft agley
+"""
+
+2.
+var shakespeare = """
+To be or not to be
+that is the question
+"""
+
+3.
+var joseph = """
+When I am an old woman,
+I shall wear purple
+with a red hat that doesn't go,
+and doesn't suit me
+"""
+
+4.
+var eliot = "This is the way the world ends
+Not with a bang but with a whimper"
+
+5.
+var tennyson = """
+Tis better to have loved
+and lost than never
+ to have loved at all
+"""
+
+6.
+var lear = "The Owl and the Pussy-cat went to sea
+In a beautiful pea-green boat,
+They took some honey, and plenty of money,
+Wrapped up in a five-pound note."
+
+7.
+var wordsworth = """
+I wandered lonely as a cloud
+that floats on high
+o'er vales and hills
+"""
+
+8.
+var coleridge = """
+Water, water, everywhere
+and not a drop to drink"""
+
+9.
+var henley = """I am the master of my fate
+I am the captain of my soul"""
+
+10.
+var rossetti = """
+For if the darkness and corruption leave
+A vestige of the thoughts that once I had,
+Better by far you should forget and smile
+Than that you should remember and be sad.
+"""
+
+11.
+var shelley = "My name is Ozymandias, King of Kings
+Look on my works, ye mighty, and despair!"
+
+12.
+var brooke = ""If I should die,
+think only this of me
+There is some corner of a foreign field
+That is forever England."
+```
+
+- 以下哪一行代码使用了字符串插值：
+
+```swift
+1.
+A:
+var name = "\(firstName) \(lastName)"
+B:
+var versionString = "You're using v(version)"
+
+2.
+A:
+var alert = "Error: \(message)!"
+B:
+var message = "Installation failed: \{reason}."
+
+3.
+A:
+var forecast = "Today's weather will be \(weather)"
+B:
+var formattedHeight = "You are (size)cm"
+
+4.
+A:
+var result = "\(daysRemaining) days to go"
+B:
+var engine = "Your engine is (size)cc"
+
+5.
+A:
+var str = "Hello, playground!"
+B:
+var warning = "You need to be \(years) or older"
+
+6.
+A:
+var error = "Error, please try again."
+B:
+var greeting = "Hello, \(name)!"
+```
+
+- 使用 Swift 的数组类型改写以下 Objective-C 代码：
+
+```swift
+1.
+NSString * videoPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingString:@"/cutVideo.mp4"];
+
+2.
+NSTimeInterval timeInterval = [[NSDate date] timeIntervalSince1970];
+NSString * fileName = [NSString stringWithFormat:@"PHMediaAudioRecorder_%.0f.mp3",timeInterval];
+
+3.
+NSString *httpStr = @"http://yxt.yunxuetang.cn";
+if ([httpStr hasPrefix:@"http://"]) {
+  return YES;
+}
+
+4.
+NSString *keyPath = @"status";
+if ([keyPath isEqualToString:@"status"]) {
+}
+```
+
+- 编写一个方法判断一个字符串是否全部为不重复的字符（区分大小写）。
+- 编写一个方法判断一个字符串是否为回文体(正向和反向读一样)，如：'rotator' 正确，'note eton' 正确，'ne rren' 错误（空格未匹配），（忽略大小写）。
+
+
 
 ### Set
 
