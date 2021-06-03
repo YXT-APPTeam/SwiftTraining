@@ -91,6 +91,28 @@ let numsCannotDivideBy2 = nums2.reduce([Int]()) { $1 % 2 > 0 ? $0 + [$1 % 2] : $
 
 - 给 Array 类型添加扩展方法，用于给数组扩容，执行条件：当数组中现有元素数量超过当前容量一半时扩容（容量翻倍）；另外，如果数组元素是 String 类型时，扩容时容量变为原来 3 倍。
 
+```swift
+// 参考答案
+extension Array {
+    func shouldAddCapacity() -> Bool {
+        guard count > capacity / 2 else { return false }
+        return true
+    }
+    
+    mutating func addCapacity() {
+        guard shouldAddCapacity() else { return }
+        reserveCapacity(capacity * 2)
+    }
+}
+
+extension Array where Element == String {
+    mutating func addCapacity() {
+        guard shouldAddCapacity() else { return }
+        reserveCapacity(capacity * 3)
+    }
+}
+```
+
 ### 字符串
 
 - 哪一行代码创建的是字符串：
@@ -273,6 +295,116 @@ if ([keyPath isEqualToString:@"status"]) {
 
 - 编写一个方法判断一个字符串是否全部为不重复的字符（区分大小写）。
 - 编写一个方法判断一个字符串是否为回文体(正向和反向读一样)，如：'rotator' 正确，'note eton' 正确，'ne rren' 错误（空格未匹配），（忽略大小写）。
+
+### 函数
+
+- 以下代码是否正确：
+
+```swift
+1.
+func recordPodcast(name: String, length: Int) {
+	if length > 60 {
+		print("That's too long!")
+	} else {
+		print("Recording \(name)...")
+	}
+}
+
+2.
+func driveCar(_ type: String) {
+	print("I'm test driving a \(type)")
+}
+driveCar("Ferrari")
+
+3.
+func play(games: String...) {
+	for game in games {
+		print("Let's play \(game)!")
+	}
+}
+play(games: "Chess")
+
+4.
+func makeSandwich(fillings String...) {
+	print("I'm making a sandwich...")
+	for filling in fillings {
+		print("Let's add some \(filling).")
+	}
+}
+
+5.
+enum ReadingErrors: Error {
+	case tooBoring
+}
+func readBook(isFiction: Bool = true) throws {
+	if isFiction {
+		print("Story time!")
+	} else {
+		throw ReadingErrors.tooBoring
+	}
+}
+
+6.
+enum SwimmingError: Error {
+	case cantSwim
+}
+func swim(distance: Int) {
+	throw SwimmingError.cantSwim
+}
+
+7.
+func sumOfFactors(for number: Int) -> Int {
+	var sum = 0
+	for i in 1...number {
+		if number % i == 0 {
+			sum += i
+		}
+	}
+	return sum
+}
+let sum = sumOfFactors(for: 100)
+
+8.
+func eatIceCream {
+	print("Yum!")
+}
+
+9.
+func checkFor(_ searchName: String, in names: [String]) -> Bool {
+	for name in names {
+		if name == searchName {
+			return true
+		}
+	}
+}
+
+10.
+func showStartPrompt() {
+	print("Tap the screen to begin")
+}
+
+11.
+func isUserAllowed(name username: String) -> Bool {
+	if name == "Anonymous" {
+		print("Forbidden")
+	} else {
+		print("Allowed")
+	}
+}
+
+12.
+func paintWalls(tastefully: Bool, color: inout String) {
+	if tastefully {
+		color = "cream"
+	} else {
+		color = "tartan"
+	}
+}
+let color = ""
+paintWalls(tastefully: true, color: &color)
+```
+
+
 
 
 
