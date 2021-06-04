@@ -404,7 +404,79 @@ let color = ""
 paintWalls(tastefully: true, color: &color)
 ```
 
+### 闭包
 
+- 以下代码是否正确：
+
+```swift
+1.
+var signAutograph(to name: String) = {
+	print("To \(name), my #1 fan")
+}
+signAutograph(to: "Lisa")
+
+2.
+var paintPicture() {
+	print("Where are my watercolors?")
+}
+
+3.
+let learnSwift = {
+	print("Closures are like functions")
+}
+learnSwift()
+
+4.
+let greetUser = {
+	print("Hi there!")
+}
+greetUser()
+
+5.
+var connectVPN = {
+	print("Connected!")
+}
+connectVPN()
+
+6.
+takeCruise = {
+	print("A week of vacation!")
+}
+
+7.
+let sing {
+	print("Tralala")
+}
+sing()
+
+8.
+var meetFriends = {
+	print("Let's watch a movie")
+}
+meetfriends()
+
+9.
+let walkDog = {
+	print("Let's go to the park")
+}
+
+10.
+let upgrade() = {
+	print("Upgrading...")
+}
+upgrade()
+
+11.
+var castVote = {
+	print("I voted!")
+}
+castVote()
+
+12.
+var takeMedicine = {
+	print("I feel a little better")
+}
+```
 
 
 
