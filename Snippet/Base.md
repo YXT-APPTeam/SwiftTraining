@@ -478,6 +478,107 @@ var takeMedicine = {
 }
 ```
 
+- 以下代码是否正确：
+
+```swift
+1.
+var cleanRoom = { (name: String) in
+	print("I'm cleaning the \(name).")
+}
+cleanRoom("kitchen")
+
+2.
+var sendMessage = { (message: String) in
+	if message != "" {
+		print("Sending to Twitter: \(message)")
+	} else {
+		print("Your message was empty.")
+	}
+}
+
+3.
+var click = { (button: Int) in
+	if button >= 0 {
+		print("Button \(button) was clicked.")
+	} else {
+		print("That button doesn't exist.")
+	}
+}
+
+4.
+printDocument = { (copies: Int) in
+	for _ in 1...copies {
+		print("Printing document...")
+	}
+}
+
+5.
+var shareWinnings = { (amount: Double) in
+	let half = amount / 2.0
+	print("It's \(half) for me and \(half) for you.")
+}
+shareWinnings("50")
+
+6.
+var pickFruit = { (name: String) in
+	switch name {
+	case strawberry:
+		fallthrough
+	case raspberry:
+		print("Strawberries and raspberries are half price!")
+	default:
+		print("We don't have those.")
+	}
+}
+
+pickFruit("strawberry")
+
+7.
+let calculateResult = { (answer) in
+	if answer == 42 {
+		print("You're correct!")
+	} else {
+		print("Try again.")
+	}
+}
+
+8.
+let fixCar = { (problem: String) in
+	print("I fixed the \(problem).")
+}
+
+9.
+let makeReservation = { (people: Int) in
+	print("I'd like a table for \(people), please.")
+}
+
+10.
+var cutGrass = { (length currentLength: Double) in
+	switch currentLength {
+	case 0...1:
+		print("That's too short")
+	case 1...3:
+		print("It's already the right length")
+	default:
+		print("That's perfect.")
+	}
+}
+
+11.
+let watchTV = { (channel: String) in
+	print("I'm going to watch some \(channel)")
+}
+watch_TV("BBC News")
+
+12.
+let rowBoat = { (distance: Int) in
+	for _ in 1...distance {
+		print("I'm rowing 1km.")
+	}
+}
+rowBoat(5)
+```
+
 
 
 ### Set
