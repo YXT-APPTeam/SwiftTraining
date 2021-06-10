@@ -704,7 +704,127 @@ let bakeBirthdayCake = { (name: String) -> Int in
 }
 ```
 
+- 以下代码是否正确：
 
+```swift
+1.
+var swift {
+	print("Cool - I can use closures!")
+}
+func writeCode(using language: () -> Void) {
+	language()
+	print("That'll be eleventy billion dollars, please.")
+}
+
+2.
+var playWithDog = {
+	print("Fetch!")
+}
+func play(using playType: () -> Void) -> String {
+	print("Let's play a game")
+	playType()
+}
+play(using: playWithDog)
+
+3.
+var makeFromStraw = {
+	print("Let's build it out of straw")
+}
+func buildHouse(using buildingStyle: () -> Void) {
+	buildingStyle
+	print("It's ready - can anyone blow it down?")
+}
+
+4.
+let awesomeTalk = {
+	print("Here's a great talk!")
+}
+func deliverTalk(name: String, type: () -> Void) {
+	print("My talk is called \(name)")
+	type()
+}
+deliverTalk(name: "My Awesome Talk", type: awesomeTalk)
+
+5.
+let swanDive = {
+	print("SWAN DIVE!")
+}
+func performDive(type dive: () -> Void) {
+	print("I'm climbing up to the top")
+	dive()
+}
+performDive(type: swanDive)
+
+6.
+let helicopterTravel = {
+	print("Get to the chopper!")
+}
+func travel(by travelMeans: () -> Void) {
+	print("Let's go on vacation...")
+	travelMeans()
+}
+travel(by: helicopterTravel)
+
+7.
+let evilRobot = {
+	print("EXTERMINATE")
+}
+func buildRobot(personality: () -> Void) {
+	print("Time to turn on the robot!")
+	personality()
+}
+buildRobot(using: evilRobot)
+
+8.
+var goOnBike = {
+	print("I'll take my bicycle.")
+}
+func race(using vehicleType: () -> Void) {
+	print("Let's race!")
+	vehicleType()
+}
+
+9.
+var payCash = {
+	print("Here's the money.")
+}
+func buyClothes(item: String, using payment: () -> Void) {
+	print("I'll take this \(item).")
+	payment()
+}
+buyClothes(item: "jacket", using: payCash)
+
+10.
+var payCash = {
+	print("Here's the money.")
+}
+func buyClothes(item: String, using payment: () -> Void) {
+	print("I'll take this \(item).")
+	payment()
+}
+buyClothes(item: "jacket", using: payCash)
+
+11.
+let driveSafely = {
+	return "I'm being a considerate driver"
+}
+func drive(using driving: () -> Void) {
+	print("Let's get in the car")
+	driving()
+	print("We're there!")
+}
+drive(using: driveSafely)
+
+12.
+var learnWithUnwrap = {
+	print("Hey, this is fun!")
+}
+func learnSwift(using approach: () -> Void) {
+	print("I'm learning Swift")
+	approach()
+}
+learnSwift(using: learnWithUnwrap)
+```
 
 
 
