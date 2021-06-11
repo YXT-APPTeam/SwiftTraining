@@ -826,6 +826,141 @@ func learnSwift(using approach: () -> Void) {
 learnSwift(using: learnWithUnwrap)
 ```
 
+- 以下代码是否正确：
+
+```swift
+1.
+func holdClass(name: String, lesson: () -> Void) {
+	print("Welcome to \(name)!")
+	lesson()
+	print("Make sure your homework is done by next week.")
+}
+holdClass("Philosophy 101", lesson:) {
+	print("All we are is dust in the wind, dude.")
+}
+
+2.
+func phoneFriend(conversation: () -> Void) {
+	print("Calling 555-1234...")
+	conversation()
+}
+phoneFriend:
+	print("Hello!")
+	print("A foreign prince wants to give you $5 million.")
+	print("What are your bank details?")
+
+3.
+func doTricks(_ tricks: () -> Void) {
+	print("Start recording now!")
+	tricks()
+	print("Did you get all that?")
+}
+
+4.
+func tendGarden(activities: () -> Void) {
+	print("I love gardening")
+	activities()
+}
+tendGarden {
+	print("Let's grow some roses!")
+}
+
+5.
+func makeCake(instructions: () -> Void) {
+	print("Wash hands")
+	print("Collect ingredients")
+	instructions()
+	print("Here's your cake!")
+}
+makeCake {
+	print("Mix egg and flour")
+}
+
+6.
+func brewTea(steps: ()) {
+	print("Get tea")
+	print("Get milk")
+	print("Get sugar")
+	steps()
+}
+brewTea {
+	print("Brew tea in teapot.")
+	print("Add milk to cup")
+	print("Pour tea into cup")
+	print("Add sugar to taste.")
+}
+
+7.
+func assembleToy(instruction: () -> Void) {
+	instructions()
+	print("It's done!")
+}
+assembleToy {
+	print("Grok the glib")
+	print("Flop the flip")
+	print("Click the clack")
+}
+
+8.
+func knitSweater(then: () -> Void) {
+	print("Buy wool")
+	for _ in 1...100 {
+		print("Knit knit knit...")
+	}
+	action()
+}
+knitSweater {
+	print("Who wants to buy a sweater?")
+}
+
+9.
+func repeatAction(count: Int, action: () -> Void) {
+	for _ in 0..<count {
+		action()
+	}
+}
+repeatAction(count: 5) {
+	print("Hello, world!")
+}
+
+10.
+func clean(tasks: () -> Void) {
+	print("It's time to clean the house.")
+	tasks()
+}
+clean [
+	print("I'm going to clean the kitchen.")
+	print("I'm going to tidy the study.")
+	print("I'm going to nuke the kids' room.")
+]
+
+11.
+func goCamping(then action: () -> Void) {
+	print("We're going camping!")
+	action()
+}
+goCamping {
+	print("Sing songs")
+	print("Put up tent")
+	print("Attempt to sleep")
+}
+
+12.
+func goOnVacation(to destination: String, _ activities: () -> Void) {
+	print("Packing bags...")
+	print("Getting on plane to \(destination)...")
+	activities()
+	print("Time to go home!")
+}
+goOnVacation(to: "Mexico") {
+	print("Go sightseeing")
+	print("Relax in sun")
+	print("Go hiking")
+}
+```
+
+
+
 
 
 ### Set
