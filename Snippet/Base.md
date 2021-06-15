@@ -959,7 +959,27 @@ goOnVacation(to: "Mexico") {
 }
 ```
 
+- 使用闭包语法改写以下 Objective-C 代码：
 
+```swift
+typedef void(^cutCompleteBlock)(NSString * _Nonnull videoPath, NSString * _Nonnull thumbnailPath);
+@property (nonatomic, copy) cutCompleteBlock _Nullable completeBlock;
+
+editorVC.completeBlock = ^(NSString * _Nonnull videoPath, NSString * _Nonnull thumbnailPath) {
+    // 视频
+    long long videoLength = [PHResourceChooseUtil getVideoTimeWithLocalPath:videoPath];
+    long long videoSize = [[PHFileManager sizeOfFileAtPath:videoPath] longLongValue];
+    pickerModel.fileVideoPath = videoPath;
+    pickerModel.videoLength = videoLength;
+    pickerModel.videoFileSize = videoSize;
+    // 封面
+    long long imageFileSize = [[PHFileManager sizeOfFileAtPath:thumbnailPath] longLongValue];
+    pickerModel.fileImagePath = thumbnailPath;
+    pickerModel.imageFileSize = imageFileSize;
+
+    [weakSelf handleSelectedVideoWithPickerModel:pickerModel videoConfigModel:videoConfigModel];
+};
+```
 
 
 
