@@ -1314,6 +1314,79 @@ A: raw value 可以让 case 具体一定含义
 B: 枚举必须包含 raw value
 ```
 
+### 协议
+
+- 以下协议定义是否正确：
+
+```swift
+1.
+protocol Swimmable {
+	var depth { get }
+}
+
+2.
+protocol Purchaseable {
+	var price: Double { get set }
+	var currency: String { get set }
+}
+
+3.
+protocol Climbable {
+	var height: Double { get }
+	var gradient: Int { get }
+}
+
+4.
+protocol Mailable {
+	var width: Double { get, set }
+	var height: Double { get, set }
+}
+
+5.
+protocol Strokeable {
+	fluffiness: Int { get }
+}
+
+6.
+protocol Learnable {
+	var difficulty: Int { get }
+}
+
+7.
+protocol Washable {
+	var dirtinessLevel: Int { get set }
+}
+
+8.
+struct Knittable {
+	var needleSizes: [Double] { get set }
+}
+
+9.
+protocol Singable {
+	var lyrics: [String] { get set }
+	var notes: [String] { get set }
+}
+
+10.
+protocol Plantable {
+	var requirements: [String] { get set }
+}
+
+11.
+protocol Buildable {
+	var numberOfBricks: Int { set }
+	var materials: [String] { set }
+}
+
+12.
+protocol Liftable {
+	var weight: Double get set
+}
+```
+
+
+
 ### 混合题
 
 - 以下代码创建的是否为数组、字典、set、元组中的一种类型：
