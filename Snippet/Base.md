@@ -1385,7 +1385,108 @@ protocol Liftable {
 }
 ```
 
+- 以下代码是否正确：
 
+```swift
+1.
+protocol HasAge {
+	var age: Int { get set }
+	mutating func celebrateBirthday()
+}
+
+2.
+protocol Paintable { }
+protocol Tileable { }
+struct Wall: Paintable, Tileable { }
+
+3.
+extension Collection {
+	func describe() {
+		if count == 1 {
+			print("There is 1 item.")
+		} else {
+			print("There are \(count) items.")
+		}
+	}
+}
+
+4.
+protocol Ridable
+protocol Trainable
+protocol Dog: Trainable
+
+5.
+protocol NotAMoon { }
+protocol HasExhaustPort { }
+struct DeathStar: NotAMoon HasExhaustPort { }
+
+6.
+protocol CanFly {
+	var maximumFlightSpeed: Int { get set }
+}
+protocol CanDrive {
+	var maximumDrivingSpeed: Int { get set }
+}
+struct FlyingCar: CanFly, CanDrive { }
+
+7.
+protocol TravelsThroughTime {
+	mutating func travel(to year: Int)
+}
+protocol BiggerOnTheInside {
+	func findSwimmingPool()
+}
+protocol TARDIS: TravelsThroughTime BiggerOnTheInside {
+	var doctorNumber: Int { get set }
+}
+
+8.
+protocol Inflatable {
+	mutating func refillAir()
+}
+extension Inflatable {
+	mutating func refillAir() {
+		print("Refilling the air.")
+	}
+}
+
+9.
+protocol SuitableForKids {
+	var minimumAge: Int { get set }
+	var maximumAge: Int { get set }
+}
+protocol SupportsMultiplePlayers {
+	var minimumPlayers: Int { get set }
+	var maximumPlayers: Int { get set }
+}
+struct FamilyBoardGame: SuitableForKids, SupportsMultiplePlayers {
+	var minimumAge = 3
+	var maximumAge = 110
+	var minimumPlayers = 1
+	var maximumPlayers = 4
+}
+
+10.
+protocol Adjustable {
+	mutating func adjustValue(by amount)
+}
+
+11.
+protocol HasPages {
+	var pageCount: Int
+}
+protocol HasTableOfContents {
+	var titles: [String]
+}
+protocol Book: HasPages, HasTableOfContents {
+	var author: String
+}
+
+12.
+protocol Identifiable {
+	var id: Int { get set }
+}
+```
 
 ### 混合题
 
